@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 
 import userRouter from "./router/user.router.js";
-import signupRouter from "./router/user.signup.js";
+import userAth from "./router/Athuser.router.js";
 
 dotenv.config();
 
@@ -21,7 +21,7 @@ mongoose
   });
 
 app.use("/api/user", userRouter);
-app.use("/api/user", signupRouter);
+app.use("/api/user", userAth);
 
 app.use((err, req, res, next) => {
   const statusCode = err.statusCode || 500;
