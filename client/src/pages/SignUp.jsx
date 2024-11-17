@@ -42,7 +42,9 @@ const SignUp = () => {
 
   return (
     <div className="max-w-lg mx-auto p-4">
-      <h1 className="text-center text-3xl font-semibold py-7">sign up</h1>
+      <h1 className="text-center text-3xl font-semibold py-7 capitalize">
+        sign up
+      </h1>
       <form className="flex flex-col gap-3" onSubmit={handleSubmit}>
         <input
           type="text"
@@ -67,7 +69,7 @@ const SignUp = () => {
         />
         <button
           disabled={loading}
-          className="text-white bg-slate-800 p-2 rounded-lg hover:opacity-85 disabled:opacity-80"
+          className="text-white bg-slate-800 p-2 rounded-lg hover:opacity-85 disabled:opacity-80 uppercase"
         >
           {loading ? "Loading..." : "sign up"}
         </button>
